@@ -1,1 +1,2 @@
 Getting Git is legit.
+I don't see anything. I guess it is because it is a txt file.
