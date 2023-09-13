@@ -20,6 +20,7 @@
 
 /*====PROMPT ====*/
 
+/*
 let currentSpeed = prompt ("How fast are you driving?");
 let plannedSpeed = prompt ("How fast do you want to drive?");
 let distanceLeft = prompt ("How many miles do you have left?");
@@ -29,4 +30,4 @@ let timeAtCurrentSpeed = (distanceLeft / currentSpeed) * 60;
 let timeAtPannedSpeed = (distanceLeft / plannedSpeed) * 60;
 
 console.log(`At your current speed you will take ${ timeAtCurrentSpeed }  minutes.`);
-console.log(timeAtPannedSpeed);
+console.log(timeAtPannedSpeed);*/
