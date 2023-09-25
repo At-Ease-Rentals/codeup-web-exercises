@@ -6,10 +6,10 @@
     <link rel ="stylesheet" href ="../img/favicon.ico">
 </head>
 <body>
-
+<form method="POST" action="https://request-inspector.glitch.me/">
 <fieldset>
     <legend>Personal Info</legend>
-        <form method="POST" action="https://request-inspector.glitch.me/">
+
             <label for="email">Email: </label>
             <input id="email" name=" email" type="email"  placeholder="Add your email">
             <br>   <br>
@@ -18,9 +18,9 @@
             <br>  <br>
             <label >Bio: </label>
             <textarea name="comment "></textarea>
-        </form>
-</fieldset>
 
+</fieldset>
+<br>
 <fieldset> <!-- radio button section -->
         <legend>Source</legend>
         <p>How did you hear about us?</p>
@@ -46,8 +46,9 @@
          <input  id="other" type="radio" name="other" value="Other">
     </fieldset>
     //if the radio buttons have different names you can select all of the radio buttons.-->
-<br><br>
+<br>
 <fieldset>
+    <legend>Browser Info</legend>
     <label for="browser">What web browser are you using</label>
     <select name="browser" id="browser">
         <option value=""></option>
@@ -56,9 +57,10 @@
         <option value="firefox">firefox</option>
         <option value="edge">edge</option>
     </select>
-    <br><br>
-    <button type = "submit>">Submit</button>
 </fieldset>
+    <br>
+<button type = "submit>">Submit</button>
+</form>
 <hr>
 <footer>
         <ul>
@@ -66,7 +68,7 @@
                 <li >Home</li>
             </a>
         </ul>
-        <br>
+    <hr>
         <p>All products come with our quality guarantee &trade;.</p>
 </footer>
 </body>
