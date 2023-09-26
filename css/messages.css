@@ -9,7 +9,7 @@ body, html {
 .message-message-info {
     color: blue;
     background-color: #88b2ff;
-    border: 1px lightgray;
+    /*border: 1px lightgray;*/
     /*font-weight: bold;*/
     width: calc(100%);
     padding: 4px 0 4px 0 ;
@@ -20,7 +20,7 @@ body, html {
 .message-message-success {
     color: green;
     background-color: #b9f8b9;
-    border: 1px lightgray;
+    /*border: 1px lightgray;*/
     /*font-weight: bold;*/
     width: calc(100%);
     padding: 4px 0 4px 0 ;
@@ -31,7 +31,7 @@ body, html {
 .message-message-warning {
     color: #7f7f03;
     background-color: yellow;
-    border: 1px lightgray;
+    /*border: 1px lightgray;*/
     /*font-weight: bold;*/
     width: calc(100%);
     padding: 4px 0 4px 0 ;
@@ -42,7 +42,7 @@ body, html {
 .message-message-error {
     color: #bc0202;
     background-color: #e59f9f;
-    border: 1px lightgray;
+    /*border: 1px lightgray;*/
     /*font-weight: bold;*/
     width: calc(100%);
     padding: 4px 0 4px 0 ;
