@@ -13,8 +13,7 @@ body, html {
     /*font-weight: bold;*/
     width: calc(100%);
     padding: 4px 0 4px 0 ;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    margin: 0 auto;
 }
 
 .message-message-success {
