@@ -12,14 +12,15 @@
         return 'Hello ' + name + '!"';
 }
 sayHello('codeup');
-/**
+/*
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
  * Store the result of the function call in a variable named 'helloMessage'.
  *
  * console.log 'helloMessage' to check your work
  */
-
+sayHello('Anthony');
+console.log(sayHello('Anthony'));
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
