@@ -33,7 +33,7 @@ console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-const random = Math.floor((Math.random() * 3) + 1);
+const random = Math.floor((Math.random() * 3) + 1 );
 
 /**
  * TODO:
@@ -52,6 +52,10 @@ const random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+    function isTwo(number) {
+        return number === 2;
+}
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -64,6 +68,13 @@ const random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(a, b) {
+    let tipPercentage = a;
+    let totalBill = b;
+    let tipAmount = tipPercentage * totalBill;
+    return tipAmount;
+}
+console.log(calculateTip);
 
 /**
  * TODO:
@@ -71,6 +82,7 @@ const random = Math.floor((Math.random() * 3) + 1);
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
 
 /**
  * TODO:
