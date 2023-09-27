@@ -8,13 +8,10 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-fucntion sayHello (name) {
-
+    function sayHello(name){
+        return 'Hello ' + name + '!"';
 }
-let name = "Hello";
-console.log(name + sayHello) {
-
-}
+sayHello('codeup');
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
