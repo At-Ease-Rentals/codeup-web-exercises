@@ -19,8 +19,8 @@ sayHello('codeup');
  *
  * console.log 'helloMessage' to check your work
  */
-sayHello('Anthony');
-console.log(sayHello('Anthony'));
+let helloMessage = sayHello('Anthony');
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
