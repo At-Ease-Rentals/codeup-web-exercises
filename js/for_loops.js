@@ -1,1 +1,2 @@
-_
+'use strict'
+

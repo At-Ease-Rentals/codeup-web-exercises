@@ -21,6 +21,20 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+let message = prompt('Enter a color:  ');
+function analyzeColor(colors) {
+    if (colors === 'blue') {
+       return  `${colors}` + " is the color fo the sky" ;
+    } else if (colors === 'red') {
+        return  'Strawberries are ' +`${colors}`;
+    } else if (colors === 'cyan') {
+        return  `${colors}` + " is the color of shallow water over a sandy beach. ";
+    } else  {
+        return "Hmm, it seems we do not have anything for " + `${colors}` +'.';
+    }
+}
+let results = analyzeColor(message);
+console.log(results);
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -29,11 +43,14 @@
 //                  will contain a different color every time the page loads)
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+let newColor = analyzeColor(randomColor);
+console.log(newColor);
 
 /**
  * TODO:

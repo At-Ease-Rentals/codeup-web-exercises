@@ -1,30 +1,30 @@
 "use strict";
 
-/*
+
 let i   = 1;// initialization
 while (i  <= 10 ) { //test
     console.log();
   //  ++ i; // update
 }
 console.log('help, me!');
-*/
 
-/*
+
+
 let i   = 10;// initialization
 while (i  <= 10 ) { //test
     console.log('while loop iteration' + i);
        i++; // update
 }
-console.log('done');*/
+console.log('done');
 
 
-/*let i   = 10;// initialization
+let i   = 10;// initialization
 do {
     console.log('do while loop iteration' + i);
     i++; // update
-}while (i  <= 10 );  //test*/
+}while (i  <= 10 );
 
-/*
+
 let answer  = 7;
 let guess = 0;
 while(guess !== answer) {
@@ -34,10 +34,10 @@ while(guess !== answer) {
     }
 }
 console.log("You guessed it'")
-console.log('done');*/
+console.log('done');
 
-/*
+
 for(let i =0; /!*initialization*!/   i  <= 10; /!*test*!/  i++/!*update*!/) {
 console.log('for loop iteration #' + i);
 console.log('done');
-}*/
+}
