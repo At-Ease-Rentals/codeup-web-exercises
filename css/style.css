@@ -64,3 +64,14 @@ article > pre {
 p {
   text-align: center;
 }
+
+/*
+multi
+line
+comment
+*/
+
+.fancy-header {
+  color: purple; /* single line comment */
+  text-decoration: underline;
+}

@@ -25,7 +25,9 @@ h2, h3 {
     width: 2em;
 }
 
-.border {border: 2px solid black;}
+.border {
+    border: 2px solid black;
+}
 
 .card {
     width: 400px;
@@ -58,10 +60,12 @@ section:nth-of-type(1) div:last-child {
     align-self: start;
 }
 
-.purple-box {
+.purple-box, border {
     background: fuchsia;
     width: 3em;
     height: 1em;
+    padding: 1px;
+    margin: 10px 0 15px 0;
 }
 
 .purple-box:nth-of-type(1) {
@@ -119,6 +123,9 @@ section:nth-of-type(5) {
     background: yellow;
     width: 2em;
     height: 2em;
+    padding: 15px;
+    margin: 10px 0 15px 0;
+
 }
 
 section:nth-of-type(6) {
