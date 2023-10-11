@@ -11,7 +11,9 @@
     function sayHello(name){
         return 'Hello ' + name + '!"';
 }
-sayHello('codeup');
+let message = sayHello('codeup');
+console.log(message);
+
 /*
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
