@@ -11,13 +11,13 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    /*    const person = {
+const person = {
          firstName: "Anthony",
         lastName: "Gantt"
     };
         console.log(person.firstName);
         console.log(person.lastName);
-*/
+        console.log(person.firstName +" " + person.lastName);
 
     /**
      * TODO:
@@ -29,14 +29,14 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-/*    const person1 = {
+const person1 = {
         firstName: "Anthony",
         lastName: "Gantt",
         sayHello: function() {
             return  `Hello from ${person1.firstName} ${person1.lastName}`
         }
     };
-    console.log(person1.sayHello());*/
+    console.log(person1.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -70,10 +70,6 @@
                 }
             );
 
-
-
-
-
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -86,6 +82,60 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+ const books = [
+     {
+        title: "Green Lights",
+        author:
+        {
+            fName: "Matthew",
+            lName: 'McConaughey'
+        }
+    },
+    {
+        title: "The Spare",
+        author:
+            {
+            fName: "Henry",
+            lName: 'Whales'
+            }
+    },
+   {
+       title: "Blink",
+       author:
+        {
+           fName: "Malcolm",
+           lName: 'Gladwell'
+         }
+    },
+        {
+        title: "Outliers",
+        author:
+        {
+             fName: "Malcolm",
+             lName: 'Gladwell'
+        }
+     },
+  {
+      title: "Tipping Point",
+      author:
+          {
+              fName: "Malcolm",
+              lName: 'Gladwell'
+          }
+  },
+    ];
+
+    console.log(books[0].title)
+    console.log(books[1].title)
+    console.log(books[0].author.fName)
+    console.log(books[1].author.lName)
+
+    console.log(books[2].title)
+    console.log(books[3].title)
+    console.log(books[2].author.fName)
+    console.log(books[3].author.lName)
+
 
     /**
      * TODO:
@@ -112,6 +162,15 @@
      *      ...
      */
 
+    function eachBooksInfo(books) {
+        for (let i = 0; i < books.length ; i++) {
+            console.log(`Book # ${i + 1}`);
+            console.log(`Title: ${books[i].title}`);
+            console.log(`Author: ${books[i].author.fName} ${books[i].author.lName}`);
+            console.log('---');
+        }
+    }
+    console.log(eachBooksInfo(books));
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -122,5 +181,13 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-
+function createBook(title, fName, lName) {
+  return {
+          title: title,
+          author: {
+              fName: fName,
+              lName:  lName
+             }
+        };
+}
 })();

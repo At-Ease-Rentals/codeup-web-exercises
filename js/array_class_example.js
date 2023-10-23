@@ -29,7 +29,7 @@ function add(...args) {
 	return total;
 }
 
-const randNumArr1 = [55, 1, 58, 66, 65, 92, 6, 87, 71, 48, 36, 96];
+const randNumArr1 =  [55, 1, 58, 66, 65, 92, 6, 87, 71, 48, 36, 96];
 console.log(add(...randNumArr1));
 
 const randNumArr2 = [72, 5, 90, 11, 43, 22, 100, 21];
