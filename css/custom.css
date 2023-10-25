@@ -25,10 +25,15 @@
 .user-image {
 	height: 25px;
 	weight: 25px
-	flex-direction: flex-end;
 }
 
 .far-fa-use{
 height:15px;
 weight:15px;
+}
+
+.btn {
+	display: flex;
+	justify-content: flex-end;
+	gap: 5px;
 }
