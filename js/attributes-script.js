@@ -41,3 +41,11 @@ function toggleBackground () {
 }
 
 setInterval(toggleBackground, 2000);
+
+
+// Encapsulate all your timers in a single function.
+
+// Instead of toggling the background color every two seconds for the "profile-card", create an array of colors and programmatically change the background color every two seconds.
+// 	Hint: You will have to choose a RANDOM index from the array of colors.
+
+// 	After all of your timeouts have expired, bring up a prompt that will change "profile-name" text to whatever the user inputs.
