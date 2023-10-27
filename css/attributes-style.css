@@ -31,5 +31,9 @@ rgba(0,0,0,0.1);
 }
 
 #toggle-btn:hover {
-	background-color: #0056b3;
+	background-color: #00b31e;
+}
+
+.background-toggle {
+	background-color: rgba(179, 143, 0, 0.6);
 }
