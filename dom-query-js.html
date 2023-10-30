@@ -31,6 +31,8 @@
 
 <script>
         // "use strict";
+		//
+        // DOM Model Exercises
         // // TODO: Uncomment next line and get the main header element by id
         // const mainHeader = document.getElementById('main-header');
 
@@ -64,45 +66,69 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         // document.querySelector('.sub-paragraph').innerHTML = "Mission Accomplished!";
 
+		// DOM Events Exercises
+		// const btn1 = document.getElementById('btn1');
+        // const btn1Listener = () => {
+		// 	const mainHeader = document.getElementById('main-header');
+		// 	mainHeader.innerHTML = "JavaScript is Cool";
+        // }
+		//
+		// btn1.addEventListener('click', btn1Listener);
+		//
+		// const btn2 = document.getElementById('btn2');
+		// const btn2Listener = () => {
+		// 	const subHeader = document.getElementById('sub-header');
+		// 	document.getElementById('sub-header').style.color = "blue";
+		// }
+		//
+		// btn2.addEventListener('click', btn2Listener );
+		//
+		// const btn3 = document.getElementById('btn3');
+		// const btn3Listener = () => {
+		// 	const listItems = document.querySelectorAll('li');
+		// 	for (let i = 0; i < listItems.length; i++) {
+		// 		    listItems[i].getAttribute('data-dbid');
+		// 		    if(i% 2 === 1) {
+		// 				listItems[i].style.color = 'grey';
+		// 		    }
+		// 			else  {
+		// 				listItems[i].style.color = 'blue';
+		// 			}
+		// 		}
+		// }
+		//
+		// btn3.addEventListener('click', btn3Listener);
+		//
+		// const btn4 = document.getElementById('btn4');
+		// const btn4Listener = () => {
+		// 	const subParagraphs = document.querySelectorAll('.sub-paragraph');
+		// 	document.querySelector('.sub-paragraph').innerHTML = "Mission Accomplished!";
+		// }
+		// 	btn4.addEventListener('click', btn4Listener);
 
-		const btn1 = document.getElementById('btn1');
-        const btn1Listener = () => {
-			const mainHeader = document.getElementById('main-header');
-			mainHeader.innerHTML = "JavaScript is Cool";
-        }
+//      Mouse Events Exercises
+        const mainHeader = document.getElementById('main-header');
+        mainHeader.addEventListener('click', function () {
+		this.style.backgroundColor = 'orange';
+        });
 
-		btn1.addEventListener('click', btn1Listener);
+        const paragraphs = document.querySelectorAll('p');
+		paragraphs.forEach(paragraph => {
+	        paragraph.addEventListener('dblclick', function () {
+		        this.style.fontSize = '18px';
+	        });
+	        });
 
-		const btn2 = document.getElementById('btn2');
-		const btn2Listener = () => {
-			const subHeader = document.getElementById('sub-header');
-			document.getElementById('sub-header').style.color = "blue";
-		}
+        const liElements = document.querySelectorAll('li')
+        liElements.forEach(items => {
+	        items.addEventListener('mouseenter', function () {
+		        this.style.color = "red";
+	        });
+	        items.addEventListener('mouseleave', function () {
+		        this.style.color = "";
+	        });
+        });
 
-		btn2.addEventListener('click', btn2Listener );
-
-		const btn3 = document.getElementById('btn3');
-		const btn3Listener = () => {
-			const listItems = document.querySelectorAll('li');
-			for (let i = 0; i < listItems.length; i++) {
-				    listItems[i].getAttribute('data-dbid');
-				    if(i% 2 === 1) {
-						listItems[i].style.color = 'grey';
-				    }
-					else  {
-						listItems[i].style.color = 'blue';
-					}
-				}
-		}
-
-		btn3.addEventListener('click', btn3Listener);
-
-		const btn4 = document.getElementById('btn4');
-		const btn4Listener = () => {
-			const subParagraphs = document.querySelectorAll('.sub-paragraph');
-			document.querySelector('.sub-paragraph').innerHTML = "Mission Accomplished!";
-		}
-			btn4.addEventListener('click', btn4Listener);
 
 </script>
 </body>
