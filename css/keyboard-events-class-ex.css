@@ -1,8 +1,0 @@
-.myBox {
-	height: 50px;
-	width: 50px;
-	border: 1px solid black;
-	border-radius: 5px;
-	display: flex;
-	justify-content: center;
-}
