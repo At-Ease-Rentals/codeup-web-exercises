@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>Traversing the DOM </title>
+</head>
+<body>
+<div class = "page wrapper">
+
+	<div id="national-parks-div">
+		<h3 id="national-parks-heading">National Parks</h3>
+		<ul id="national-parks">
+			<li>Arches</li>
+			<li>Badlands</li>
+			<li>Carlsbad Caverns</li>
+			<li>Denali</li>
+			<li>Everglades</li>
+		</ul>
+	</div>
+
+	<div id="state-parks-div">
+		<h3 id="state-parks-heading">State Parks of Texas</h3>
+		<ul id="state-parks-texas">
+			<li>Abilene</li>
+			<li>Big Bend</li>
+			<li>Choke Canyon</li>
+			<li>Davis Mountain</li>
+			<li>Enchanted Rock</li>
+		</ul>
+	</div>
+
+</div>
+<script>
+	const stateParksUL = document.querySelector('#state-parks-texas');
+	stateParksUL.parentElement.style.backgroundColor = 'yellow';
+
+	const stateParksLIs = document.querySelector('#state-parks-texas').children;
+	for (let i = 0; i < stateParksLIs.length; i++) {
+		stateParksLIs[i].style.fontWeight = "bold";
+	}
+
+	const stateParkUL =document.querySelector('#state-parks-texas');
+	stateParksUL.firstElementChild.style.backgroundColor = '#ad660b'
+
+	const stateParkUL2 =document.querySelector('#state-parks-texas');
+	stateParksUL.lastElementChild.style.backgroundColor = 'goldenrod';
+
+	const natlParksHeading = document.querySelector('#national-parks-heading');
+	natlParksHeading.nextElementSibling.style.backgroundColor = 'salmon';
+
+</script>
+</body>
+</html>˙

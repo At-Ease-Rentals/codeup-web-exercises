@@ -1,0 +1,10 @@
+section {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 200px;
+}
+
+article {
+	flex: 200px;
+}
+

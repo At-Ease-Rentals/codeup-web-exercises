@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    background: #c1c1c1;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex
+}
+
+.logo {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.link {
+    font-family: 'Work Sans' , sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Work Sans;
+    display: inline-block;
+    padding: 1em;
+}
+
+
+
