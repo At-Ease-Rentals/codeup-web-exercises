@@ -5,7 +5,7 @@
 
 let newProfilePic = setTimeout(updateProfilePic, 2000);
 
-function updateProfilePic() {
+function updateProfilePic()
 	document.getElementById("profile-pic").src = randomProfilePic();
 }
 
