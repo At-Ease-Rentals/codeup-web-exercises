@@ -60,8 +60,17 @@ let usersTotalYearsOfExperience = users.reduce((accumulator,value) => accumulato
 console.log(usersTotalYearsOfExperience);
 
 // Use .reduce to get the longest email from the list of users.
-let longestEmail = users.reduce((accumulator, email) => {});
+let longestEmail = users.reduce((accumulator, user) => {
+    if (user.email.length > accumulator.length) {
+        return user.email;
+    } else {
+        return accumulator;
+    }
+}, "");
+console.log(longestEmail);
 
 // Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-let instructorNames = users.reduce((name) => users.name);
+let instructorNames = users.reduce((names, user) => {
+    return names + "," + user.name;
+}, "").slice(1);
 console.log(`Your instructors are: ${instructorNames}`);
