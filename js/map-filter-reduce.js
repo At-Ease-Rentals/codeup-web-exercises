@@ -1,88 +1,67 @@
 "use strict"
 
-const prices = [32.99, 21.99, 6.99, 4.99, 12.99, 8.98, 5.99];
 
-// prices.forEach(function(price, index) {
-//     console.log(`Item number ${index + 1}: $${price}`);
-// });
+// Create a file named map-filter-reduce.js in your js directory and copy the users data below into it.
 
-
-// const smashers = ["Mario", "Donkey Kong", "Link", "Samus","Dark Samus", "Yoshi", "Kirby", "Fox", "Pikachu", "Luigi", "Ness", "Captain Falcon", "Jigglypuff",     "Peach", "Daisy", "Bowser", "Ice Climbers", "Sheik", "Zelda", "Dr. Mario", "Pichu", "Falco", "Marth", "Lucina", "Young Link", "Ganondorf", "Mewtwo", "Roy", "Chrom", "Mr. Game & Watch", "Meta Knight", "Pit", "Dark Pit", "Zero Suit Samus", "Wario", "Snake", "Ike", "Pokemon Trainer", "Squirtle", "Ivysaur", "Charizard", "Diddy Kong", "Lucas", "Sonic", "King Dedede", "Olimar", "Lucario", "R.O.B.", "Toon Link", "Wolf", "Villager", "Mega Man", "Wii Fit Trainer", "Rosalina & Luma", "Little Mac", "Greninja", "Mii Brawler", "Mii Swordfighter", "Mii Gunner", "Palutena", "Pac-Man", "Robin", "Shulk", "Bowser Jr.", "Duck Hunt", "Ryu", "Ken", "Cloud", "Corrin", "Bayonetta", "Inkling", "Ridley", "Simon", "Richter", "King K. Rool", "Isabelle", "Incineroar", "Piranha Plant", "Joker", "Hero", "Banjo & Kazooie", "Terry", "Byleth", "Min Min", "Steve", "Sephiroth", "Pyra", "Mythra", "Kazuya", "Sora"];
-//
-//
-// smashers.forEach(function(name, index){
-//     console.log(`This is each element in the array: ${name}`);
-//     console.log(`This is item ${index +1} and this is the name:${name}`);
-// });
-
-const outputDiv = document.querySelector("#output");
-
-// smashers.forEach(function(smasher, index) {
-//     const smashP = document.createElement('p');
-//     smashP.innerText = `Character item: ${index + 1}: ${smasher}`;
-    // outputDiv.appendChild(smasher);
-
-//This is an array of cars with object properties.esc
-    const cars = [
-        {
-            make: "Honda",
-            model: "Civic",
-            mileage: 10428
-        },
-        {
-            make: "Toyota",
-            model: "Corolla",
-            mileage: 9425
-        },
-        {
-            make: "Ford",
-            model: "Mustang",
-            mileage: 2567
-        },
-        {
-            make: "Audi",
-            model: "A3",
-            mileage: 14500
-        },
-        {
-            make: "Mazda",
-            model: "3",
-            mileage: 11248
-        }
-    ];
-//
-// const mileages = cars.map(car => car.mileage);
-//     // console.log(mileages);
-//     // console.log(Math.max(...cars.map(car => car.mileage)));
-//
-// const lowMileages = cars.filter(car => car.mileage < 10000);
-//
-// console.log(lowMileages);
-//
-// lowMileages.forEach(car => {
-//     const carPar = document.createElement("p");
-//     carPar.innerText = `I found a ${car.make} ${car.model} with ${car.mileage} miles.`;
-//     outputDiv.appendChild(carPar);
-//     // console.log(carPar);
-//
-// });
-
-function findMaxPrice(maxSoFar, currentPrice) {
-    if (currentPrice > maxSoFar) {
-        return currentPrice;
+const users = [
+    {
+        id: 1,
+        name: 'ryan',
+        email: 'ryan@codeup.com',
+        languages: ['clojure', 'javascript'],
+        yearsOfExperience: 5
+    },
+    {
+        id: 2,
+        name: 'luis',
+        email: 'luis@codeup.com',
+        languages: ['java', 'scala', 'php'],
+        yearsOfExperience: 6
+    },
+    {
+        id: 3,
+        name: 'zach',
+        email: 'zach@codeup.com',
+        languages: ['javascript', 'bash'],
+        yearsOfExperience: 7
+    },
+    {
+        id: 4,
+        name: 'fernando',
+        email: 'fernando@codeup.com',
+        languages: ['java', 'php', 'sql'],
+        yearsOfExperience: 8
+    },
+    {
+        id: 5,
+        name: 'justin',
+        email: 'justin@codeup.com',
+        languages: ['html', 'css', 'javascript', 'php'],
+        yearsOfExperience: 9
     }
-    return maxSoFar;
-}
+];
 
-const maxPrice = prices.reduce(findMaxPrice, Number.NEGATIVE_INFINITY);
-console.log(maxPrice);
+// Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+// let languagesWith3 = users.filter(function(user){return user.languages.length >= 3;
+// });
+// console.log(languagesWith3);
 
-//find the car with the lowest mileage
-function findLowestMileage (lowestSoFar, currentCar) {
-    if (currentCar.mileage < lowestSoFar.mileage) {
-        return lowestSoFar;
-    }
-}
-console.log(lowestSoFar);
+//trying with an arrow function
+let languagesWith3 = users.filter( user => user.languages.length >= 3);
+console.log(languagesWith3);
 
-const lowestMileageCar = cars.reduce(findLowestMileage, cars[0]);
+// Use .map to create an array of strings where each element is a user's email address
+let userEmailAddress = users.map(user =>user.email);
+console.log(userEmailAddress);
+
+// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+
+let usersTotalYearsOfExperience = users.reduce((accumulator,value) => accumulator + value.yearsOfExperience,0);
+console.log(usersTotalYearsOfExperience);
+
+// Use .reduce to get the longest email from the list of users.
+let longestEmail = users.reduce((accumulator, email) => {});
+
+// Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+let instructorNames = users.reduce((name) => users.name);
+console.log(`Your instructors are: ${instructorNames}`);
