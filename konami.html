@@ -1,78 +1,95 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-  <meta charset = "UTF-8">
+  <meta charset="UTF-8">
   <title>Konami Code</title>
-	<link rel = "stylesheet" href = "css/konami.css">
+  <link rel="stylesheet" href="../../Desktop/hippogriff/css/konami.css">
 </head>
 <body>
-    <div class = "page wrapper">
-	   <div class="container">
-		   <h1>Konami Code</h1>
-	      <p>Enter your Konami Code</p>
-	   </div>
+  <div class="container">
+    <h1>Konami Code</h1>
+    <p>Enter your Konami Code</p>
+    <p id="code"></p>
+	  <audio id="audio"   src="../../Desktop/hippogriff/audio/audio.mp3"></audio>
 
+    <script>
+      let keys = {
+	      37: "left",
+	      38: "up",
+	      39: "right",
+	      40: "down",
+	      65: "a",
+	      66: "b"
+      };
 
-	    <p id="code"></p>
+      let konamiCode = [
+	      "up", "up", "down", "down", "left", "right", "left", "right", "b", "a"
+      ];
 
-    </div>
+      document.addEventListener('keydown', checkCode, false);
 
-	    <script>
+      let keyCount = 0;
 
-			let keys = {
-				37: "left",
-				38: "up",
-				39: "right",
-				40: "down",
-				65: "a",
-				66: "b"
-			};
+      let codeTimer;
 
-		let konamiCode = [
-				"up", "up", "down", "down", "left", "right", "left", "right", "b", "a"
-		]
+      function checkCode(event) {
+	      let keyPressed = keys[event.keyCode];
+	      if (keyPressed === konamiCode[keyCount]) {
+		      keyCount++;
 
-		document.addEventListener('keydown', checkCode, false);
+		      window.clearTimeout(codeTimer);
 
-		let keyCount = 0;
+		      codeTimer = window.setTimeout(resetKeyState, 1000);
 
-		let codeTimer;
+		      if (keyCount === konamiCode.length) {
+			      cheatCodeActivated();
+			      changeBackground();
+			      removeElements();
+				  addSound();
+			      resetKeyState();
 
+		      }
+	      } else {
+		      resetKeyState();
+	      }
+      }
 
-		function checkCode(event) {
-			let keyPressed = keys [event.keyCode];
-			if (keyPressed === konamiCode[keyCount]) {
-				keyCount++;
+      function cheatCodeActivated() {
+	      alert("You have added 30 lives!");
+      }
 
-				window.clearTimeout(codeTimer);
+      function changeBackground() {
+	      let body = document.body;
+	      body.style.backgroundImage = "url('http://www.thealmightyguru.com/Wiki/images/d/d9/Contra_-_NES_-_USA.jpg')";
+		  body.style.backgroundRepeat = "no-repeat";
+		  body.style.backgroundSize = "cover";
+      }
+	      function resetKeyState() {
+		      console.log("Resetting state");
+		      keyCount = 0;
+		      window.clearTimeout(codeTimer);
+	      }
 
-				codeTimer = window.setTimeout(resetKeyState, 1000);
+	function removeElements() {
+		const container = document.querySelector('.container'); // Select the container element
 
-				if (keyCount === konamiCode.length) {
-					cheatCodeActivated();
-					resetKeyState();
-				}
-			} else {
-					resetKeyState();
-				}
+		const h1Element = container.querySelector('h1'); // Select the h1 element
+		if (h1Element) {
+			container.removeChild(h1Element); // Remove the h1 element
 		}
-;
 
-
-		function cheatCodeActivated() {
-			alert("You have added 30 lives!");
-			// let backImage = document.getElementsByTagName('body');
-			// body.style.backgroundImage = "url('img/contra.webp')";
-	        // let x = document.getElementById('contraSound').duration;
-			// document.getElementById('code').innerHTML = x;
-
+		const pElements = container.querySelectorAll('p'); // Select all p elements
+		if (pElements.length > 0) {
+			container.removeChild(pElements[0]); // Remove the first p element (index 0)
 		}
+	}
 
-		function resetKeyState() {
-			console.log("Resetting state");
-			keyCount = 0;
-			window.clearTimeout(codeTimer);
-		}
-	</script>
+	function addSound(){
+		const newSound = document.querySelector('#audio');
+		newSound.play();
+	}
+
+    </script>
+  </div>
 </body>
 </html>
