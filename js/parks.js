@@ -1,14 +1,21 @@
 "use strict";
 
+document.querySelector('.btnLi').addEventListener('click', function () {
+    document.querySelectorAll('#national-parks-list li ul li:last-child').forEach(function (li) {
+        li.style.backgroundColor = 'yellow';
+    });
+});
 
-// When any h3 is clicked, the lis underneath it should have a fontWeight of "bold". Hint: you should use this in the event listener to access the next sibling of the h3 that is clicked. You can get to the corresponding ul by traversing to the h3's sibling and then it's children.
-const buttonLi = document.querySelector('.btnLi');
-const h3Change = document.querySelectorAll('.national-parks-list');
-function changeLastLi() {
-    for (let i = 0; i < h3Change.length; i++) {
-        h3Change[i].style.fontWeight = 'bold';
-    }
-}
-buttonLi.addEventListener('click',changeLastLi);
+document.querySelectorAll('#national-parks-list h3').forEach(function (h3) {
+    h3.addEventListener('click', function () {
+        this.nextElementSibling.querySelectorAll('li').forEach(function (li) {
+            li.style.fontWeight = 'bold';
+        });
+    });
+});
 
-// When any h3 is clicked, the lis underneath it should have a fontWeight of "bold". Hint: you should use this in the event listener to access the next sibling of the h3 that is clicked. You can get to the corresponding ul by traversing to the h3's sibling and then it's children.
+document.querySelectorAll('#national-parks-list li li').forEach(function (li) {
+    li.addEventListener('click', function () {
+        this.parentElement.querySelector('li').style.color = 'blue';
+    });
+});
