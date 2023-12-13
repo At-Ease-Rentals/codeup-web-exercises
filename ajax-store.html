@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "css/ajax-store.css">
+
+</head>
+<body>
+
+<h1 class="text-center mt-4 mb-4">My Tool Store</h1>
+
+<div class="container">
+    <div class="row" id="insertProducts"></div>
+</div>
+
+<script>
+    "use strict";
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('data/inventory.json')
+        .then(response => response.json())
+        .then(data => displayProducts(data))
+        .catch(error => console.error('Error fetching data:', error));
+    });
+
+    function displayProducts(products) {
+        const productsContainer = document.getElementById('insertProducts');
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.classList.add('col-md-4');
+            card.innerHTML = `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.title}</h5>
+                        <p class="card-text">Quantity: ${product.quantity}</p>
+                        <p class="card-text">Price: ${product.price}</p>
+                        <p class="card-text">Categories: ${product.categories.join(', ')}</p>
+                    </div>
+                </div>
+            `;
+            productsContainer.appendChild(card);
+        });
+    }
+</script>
+</body>
+</html>
